@@ -18,8 +18,6 @@ public class Sierpinski {
 		StdDraw.setPenColor(StdDraw.BLACK);
 		StdDraw.filledPolygon(new double []{x1, x2, x3}, new double []{y1, y2, y3});
 		sierpinski(n, x1, x2, x3, y1, y2, y3);
-
-		StdDraw.show();
 	}
 	
 	// Does the actual drawing, recursively.
@@ -40,7 +38,7 @@ public class Sierpinski {
 
 		StdDraw.setPenColor(StdDraw.WHITE);
 		StdDraw.filledPolygon(new double []{x12, x23, x13}, new double []{y12, y23, y13});
-		
+
 		sierpinski(n - 1, x1, x12, x13, y1, y12, y13);
         
         sierpinski(n - 1, x12, x2, x23, y12, y2, y23);
